@@ -1,0 +1,10 @@
+^C:\USERS\ISSAC\SOURCE\REPOS\OWA\STORMWATER-MANAGEMENT-MODEL\SRC\OUTFILE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/issac/source/repos/OWA/Stormwater-Management-Model -BC:/Users/issac/source/repos/OWA/Stormwater-Management-Model/buildprod --check-stamp-file C:/Users/issac/source/repos/OWA/Stormwater-Management-Model/buildprod/src/outfile/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
